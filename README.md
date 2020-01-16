@@ -23,8 +23,7 @@ Or contact to e-mails:
 Remember previously you must have installed:
 - MATPOWER7.0. You can download it at: https://matpower.org/download/  .
 - IPOPT compilated (mexa file). The instructions for installation can be found: https://coin-or.github.io/Ipopt/ for linux or windows      distributions.
-- Download the repository files (FINAL_FINAL-master.zip). Unzip the folder and after add it at the MatLab PATH.
-Verify that you have the **matLab parallel computing toolBox** on the contrary some modification must be realized in differents scripts.
+- Download the folder FINAL_FINAL-master
 
 
 

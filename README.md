@@ -45,7 +45,7 @@ To call myMatLab1 function, first make sure to locate the **.raw, .rop, .inl and
 - TimeLimit:  Is the available time in seconds to get a solution of SCOPF in the base case.
 - Scoring Method: 1 for a real time approach, 2 for a extended time approach.
 
-A parpool must be created to improve the algorithm performance.  The number of workers is a fundamental factor tho achieve a  good solution in the time "TimeLimit". If you need a good response and you have few workers and a great contingencies number you should consider a good TimeLimit.
+A parpool must be created to improve the algorithm performance.  The number of workers is a fundamental factor tho achieve a  good solution in the time "TimeLimit". If you need a good response and you have few workers and a great contingencies number you should consider a large "TimeLimit".
 
 ```
                            _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ 
@@ -88,7 +88,7 @@ apply the MatPower syntax, for example:
 %%%%%%% MATLAB CODE %%%%%%%%
 load('mpc.mat')
 ///mpcOPF will appear in you workspace
-minCost=mpcOPF.      // objective fucntion in the base case
+minCost=mpcOPF.f      // objective fucntion in the base case
 Pg=mpcOPF.gen(:,2)   // active power generated
 Qg=mpcOPF.gen(:,3)   // reactive power generated
 Vm=mpcOPF.bus(:,9)   // voltage magnitudes
@@ -97,7 +97,7 @@ VA=mpcOPF.bus(:,10)  // voltages angles
 
 ```
 
-"solution1.txt" must be appear in your current folder. It contains the base case solution information.
+"solution1.txt" file must be appear in your current folder. It contains the base case solution information.
 If you want the post-contingency solution for each contingency, you must execute myMatLab2.m file.
 
 ```
@@ -107,7 +107,7 @@ If you want the post-contingency solution for each contingency, you must execute
   case.raw              |                                  |        
   case.inl  --------->  |                                  | -----> mpc.mat
   case.rop  --------->  |           MyMatLab2.m            | -----> mpcOPF  
-  case.con  --------->  |                                  | -----> solution1.txt
+  case.con  --------->  |                                  | -----> solution2.txt
                         |                                  | 
                         |                                  |   
                         | _ _ _ _ _ _ _ _ _ _ _ _ _ _ _  _ | 
